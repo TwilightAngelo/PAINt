@@ -1,0 +1,128 @@
+.div-inline {
+	display: inline-block;
+}
+
+.bord {
+	border-color: #702fa8;
+	border-style: solid;
+	border-width: 3px;
+}
+
+body {
+    background: #292929;
+}
+.row {
+    float: left;
+    width: 100%;
+}
+.row .block {
+    float: left;
+    width: 25%;
+    height: 150px;
+}
+.hoverbtn {
+    display: inline-block;
+    font-size: 18px;
+    font-weight:400;
+    line-height: 90px;
+    cursor: pointer;
+    margin: 20px;
+    width: 100%;
+    font-family:"Roboto";
+    height: 90px;
+    text-align: center;
+    position: relative;
+    text-decoration: none;
+    z-index: 1;
+    color: #fff;
+}
+.hoverbtn.small {
+    font-size: 20px;
+    line-height:45px;
+    width:100%;
+    height:45px;
+    margin:7px;
+}
+.hoverbtn.mini {
+    font-size: 15px;
+    line-height:32px;
+    width:100%;
+    height:30px;
+    margin:7px;
+}
+
+.hover-red {
+        background-color: #f00; 
+}    
+.hover-blue {
+        background-color: #00f; 
+}    
+.hover-green {
+        background-color: #0f0; 
+}    
+.hover-white {
+        background-color: #fff;    
+}    
+.hover-black {
+        background-color: #000; 
+}    
+.hover-orange {
+        background-color: #ff9600; 
+} 
+.hover-yellow {
+        background-color: #ff0; 
+} 
+.hover-cyan {
+        background-color: #5bc0de; 
+} 
+.hover-violet {
+        background-color: #ff00fa; 
+} 
+.hover-brown {
+        background-color: #8a6d3b; 
+} 
+.hoverbtn.auto-width {
+    width: auto;
+    height: auto;
+    padding: 15px;
+}
+.hoverbtn:after {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content:'';
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.hoverbtn:before {
+    speak: none;
+    font-size: 48px;
+    line-height: 90px;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    display: block;
+    -webkit-font-smoothing: antialiased;
+}
+/* Effect 6 */
+ .hoverbtn.effect-6 {
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 1);
+    -webkit-transition: background 0.2s, color 0.2s;
+    -moz-transition: background 0.2s, color 0.2s;
+    transition: background 0.2s, color 0.2s;
+}
+.hoverbtn.effect-6:hover {
+    background: rgba(255, 255, 255, 1);
+    color: #702fa8;
+}
+.hoverbtn.effect-6:hover i {
+    color: #702fa8;
+}
+.hoverbtn.effect-6:hover:before {
+    -webkit-animation: spinAround 2s linear infinite;
+    -moz-animation: spinAround 2s linear infinite;
+    animation: spinAround 2s linear infinite;
+}

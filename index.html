@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <title>HTML Document</title>
+      <script type="text/javascript" src="js/paper-full.js"></script>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+      <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+      <script type="text/javascript" src="js/myPaper.js"></script>
+      <style type="text/css">
+         .container{overflow:hidden;}
+         .box{white-space:nowrap}
+         .box div{display:inline-block;}
+         .mycanvas{margin: 10px auto; text-align: center;}
+         .canvascolor{background-color: #ffffff;}
+         .mag{display: inline;}
+      </style>
+      <link rel="stylesheet" href="css/styles.css">
+   </head>
+   <body>
+   
+
+
+   <div class="container">
+
+      <div class="hoverbtn small effect-6 col-sm-2">
+         <form onclick="setSquare()">
+            Square
+         </form>
+      </div>
+
+      <div class="hoverbtn small effect-6 col-sm-2">
+         <form onclick="setPencil()">
+            Pencil
+         </form> 
+      </div>
+
+      <div class="hoverbtn small effect-6 col-sm-2">
+         <form onclick="setCircle()">
+            Circle
+         </form> 
+      </div>
+
+      <div class="hoverbtn small effect-6 col-sm-2">
+         <form onclick="setLine()">
+            Line
+         </form> 
+      </div>
+
+      <div class="hoverbtn small effect-6 col-sm-2">
+         <form onclick="setEraser()">
+            Eraser
+         </form> 
+      </div>
+   </div>
+   <div class="container">
+      <div class="hoverbtn mini effect-6 col-sm-1">
+         <form onclick="setWidth(1)">
+            1pt
+         </form> 
+      </div>
+      <div class="hoverbtn mini effect-6 col-sm-1">
+         <form onclick="setWidth(3)">
+            3pt
+         </form> 
+      </div>
+      <div class="hoverbtn mini effect-6 col-sm-1">
+         <form onclick="setWidth(5)">
+            5pt
+         </form> 
+      </div>
+      <div class="hoverbtn mini effect-6 col-sm-1">
+         <form onclick="setWidth(7)">
+            7pt
+         </form> 
+      </div>
+      <div class="hoverbtn mini effect-6 col-sm-1">
+         <form onclick="setWidth(10)">
+            10pt
+         </form> 
+      </div>
+      <div class="hoverbtn mini effect-6 col-sm-1">
+         <form onclick="setWidth(15)">
+            15pt
+         </form> 
+      </div>
+      <div class="hoverbtn mini effect-6 col-sm-1">
+         <form onclick="setWidth(17)">
+            17pt
+         </form> 
+      </div>
+      <div class="hoverbtn mini effect-6 col-sm-1">
+         <form onclick="setWidth(20)">
+            20pt
+         </form> 
+      </div>
+
+      <div>
+         <div class="hoverbtn mini effect-6 col-sm-1 hover-red" onclick="setColor('Purple')"></div>
+         <div class="hoverbtn mini effect-6 col-sm-1 hover-orange" onclick="setColor('Orange')"></div>
+         <div class="hoverbtn mini effect-6 col-sm-1 hover-yellow" onclick="setColor('Yellow')"></div>
+         <div class="hoverbtn mini effect-6 col-sm-1 hover-green" onclick="setColor('Green')"></div>
+         <div class="hoverbtn mini effect-6 col-sm-1 hover-cyan" onclick="setColor('Cyan')"></div>
+         <div class="hoverbtn mini effect-6 col-sm-1 hover-blue" onclick="setColor('Blue')"></div>
+         <div class="hoverbtn mini effect-6 col-sm-1 hover-violet" onclick="setColor('Purple')"></div>
+         <div class="hoverbtn mini effect-6 col-sm-1 hover-black" onclick="setColor('Black')"></div>
+         <div class="hoverbtn mini effect-6 col-sm-1 hover-white" onclick="setColor('White')"></div>
+         <div class="hoverbtn mini effect-6 col-sm-1 hover-brown" onclick="setColor('Brown')"></div>
+            <input class="form-control col-sm-6 mag" id='color'>
+            <div class="hoverbtn mini effect-6 col-sm-2 mag" onclick="setColor(document.getElementById('color').value)">Set color</div>
+      </div>
+
+   </div>  
+
+   <div class = "mycanvas">
+      <canvas class="canvascolor bord" id="myCanvas" width="1625" height="500" class="bord"></canvas>
+   </div>
+
+   </body>
+</html>
